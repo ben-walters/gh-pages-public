@@ -4,6 +4,10 @@
   "version": "0.0.0",
   "type": "module",
   "homepage": "https://ben-walters.github.io/gh-pages-public",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:ben-walters/gh-pages-public.git"
+  },
   "scripts": {
     "dev": "vite",
     "build": "tsc -b && vite build",
