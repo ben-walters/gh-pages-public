@@ -12,46 +12,39 @@ function SkillsPage({id}: {id: string}) {
           PHP. As for Devops, I'm a big fan of Kubernetes.
         </Typography>
         <Typography variant="body1">
-          When it comes to software design, I tend to lean toward building
-          service-centric architectures that are scalable, reliable, testable,
-          and easy to maintain. For inter-service communication, I usually go
-          with JWT-authenticated REST APIs or gRPC, depending on what makes the
-          most sense for the project. Over the years, I've worked on all kinds
-          of applications—big and small—designed flexible CI/CD pipelines, and
-          built highly available, platform-agnostic application stacks that
-          work.
+          I specialize in building scalable, service-centric architectures using
+          technologies like JWT-authenticated REST APIs, gRPC, and GraphQL. Over
+          the years, I've worked on a wide range of applications, designed
+          robust CI/CD pipelines with tools like GitLab CI, CircleCI, and GitHub
+          Actions, and built reliable, platform-agnostic systems on AWS and
+          Google Cloud.
         </Typography>
         <Typography variant="body1">
-          Observability is a big deal for me. I'm all about gathering telemetry,
-          shipping logs, and setting up real-time notifications and monitoring.
-          These things aren't just nice to have—they're essential for making
-          sure everything runs smoothly and giving the team (and the business)
-          peace of mind that any system is doing what it's supposed to.
+          Observability is a big part of my workflow—tools like Elasticsearch,
+          Kibana, and Prometheus help me gather telemetry, ship logs, and set up
+          real-time monitoring to ensure systems run smoothly and reliably.
         </Typography>
         <Typography variant="body1">
-          I'm a big believer in using the right tool for the job. Instead of
-          trying to force a solution into a specific stack, I like to keep my
-          options open and use whatever works best. That's why I've worked with
-          a wide range of tools and technologies—messaging systems like
-          RabbitMQ, Redis, SQS, and SNS; databases like PostgreSQL, MongoDB, and
-          DynamoDB; and infrastructure-as-code tools like Ansible, Kubernetes,
-          and Helm. Having this flexibility means I can adapt to whatever the
-          project needs.
+          I'm all about using the right tool for the job. I've worked with
+          messaging systems like RabbitMQ, Redis, Kafka, and SQS; databases like
+          PostgreSQL, MySQL, MongoDB, and DynamoDB; and infrastructure-as-code
+          tools like Kubernetes, Helm, and Ansible. I also have experience with
+          caching solutions like Redis and Memcached to optimize performance.
         </Typography>
         <Typography variant="body1">
-          On top of that, I'm passionate about building systems that are not
-          just functional but also easy to use and maintain. Whether it's
-          integrating third-party APIs like Stripe, PayPal, or Twilio, or
-          working with modern frontend frameworks like React, Next.js, or Vite,
-          I always aim to create seamless, user-friendly experiences backed by
-          solid engineering.
+          On the frontend, I've built applications with React, Next.js, Vite,
+          and even dabbled in Angular. I've also integrated third-party APIs
+          like Stripe, PayPal, Twilio, and Google APIs to create seamless user
+          experiences. My goal is always the same: to build software that's
+          functional, scalable, and solves real problems.
         </Typography>
         <Typography variant="body1">
-          At the end of the day, my goal is simple: to build software that
-          solves real problems, scales effortlessly, and helps businesses
-          succeed. With a strong mix of backend, frontend, and cloud expertise
-          (AWS, GCP, and more), I try to bring a well-rounded perspective to
-          every project I take on.
+          I'm passionate about learning and constantly expanding my skill set.
+          Right now, I'm diving into Rust and loving the challenge of exploring
+          a new language. I thrive in environments where I'm encouraged to
+          tackle new problems, experiment with different technologies, and push
+          the boundaries of what I know. For me, every project is an opportunity
+          to grow and bring fresh ideas to the table.
         </Typography>
         <Typography variant="body1">
           <List>
