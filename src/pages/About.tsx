@@ -4,10 +4,10 @@ import {stackSpacing} from "../constants";
 
 function AboutPage({id}: {id: string}) {
   return (
-    <Box id={id} sx={pageStyles}>
+    <Box id={id} sx={pageStyles} className="portfolio-section">
       <Stack spacing={stackSpacing} direction={"column"}>
-        <Typography variant="h1">What's up?</Typography>
-        <Typography variant="h3">
+        <Typography variant="h2">What's up?</Typography>
+        <Typography variant="h4">
           I've been writing code since I was a kid... breaking small corners of
           the internet for over 23 years.
         </Typography>

@@ -4,9 +4,9 @@ import {stackSpacing} from "../constants";
 
 function IntroPage({id}: {id: string}) {
   return (
-    <Box id={id} sx={pageStyles}>
+    <Box id={id} sx={pageStyles} className="portfolio-section">
       <Stack spacing={stackSpacing} direction={"column"}>
-        <Typography variant="h1">Hey, I'm Ben</Typography>
+        <Typography variant="h2">Hey, I'm Ben</Typography>
         <Typography variant="h4">
           Day to day, I'm a Typescript developer, but my heart belongs to
           Devops.

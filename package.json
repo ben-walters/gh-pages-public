@@ -3,7 +3,7 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "homepage": "https://ben-walters.github.io/gh-pages-public",
+  "homepage": "https://www.awesomeshinythings.co.uk",
   "repository": {
     "type": "git",
     "url": "git@github.com:ben-walters/gh-pages-public.git"
@@ -12,7 +12,7 @@
     "dev": "vite",
     "build": "tsc -b && vite build",
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d dist",
+    "deploy": "gh-pages -d dist --add",
     "lint": "eslint .",
     "preview": "vite preview"
   },

@@ -49,23 +49,19 @@ const personalLinks = [
   {
     url: "https://github.com/ben-walters/",
     title: "GitHub",
-    description:
-      "This is my personal GitHub profile, where I showcase a variety of projects, including open-source contributions, personal experiments, and professional work. It highlights my expertise in full-stack development, DevOps, and software architecture.",
     icon: <GitHubIcon />,
   },
   {
     url: "https://www.linkedin.com/in/ben-writes-code/",
     title: "LinkedIn",
-    description:
-      "This is my LinkedIn profile, where I connect with other professionals, share insights, and highlight my career achievements. It serves as a platform to showcase my skills, experience, and professional network.",
     icon: <LinkedInIcon />,
   },
 ];
 function PortfolioPage({id}: {id: string}) {
   return (
-    <Box id={id} sx={pageStyles}>
+    <Box id={id} sx={pageStyles} className="portfolio-section">
       <Stack spacing={stackSpacing} direction={"column"}>
-        <Typography variant="h1">Portfolio</Typography>
+        <Typography variant="h2">Portfolio</Typography>
         <Typography variant="body1">
           Here are some projects i've worked on in the past:
         </Typography>

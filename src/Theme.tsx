@@ -27,9 +27,6 @@ const theme = createTheme({
     h1: {
       fontSize: "4rem",
       fontWeight: 700,
-      // ["xs"]: {
-      //   fontSize: "3rem",
-      // },
     },
     h2: {
       fontSize: "3rem",
@@ -60,6 +57,15 @@ const theme = createTheme({
           "&:hover": {
             color: theme.palette.primary.dark,
           },
+        }),
+      },
+    },
+    MuiPaper: {
+      styleOverrides: {
+        root: ({theme}) => ({
+          background: "rgba(24, 24, 24, 0.7)",
+          boxShadow: `0 0 20px ${theme.palette.primary.main}`,
+          backdropFilter: "blur(10px)",
         }),
       },
     },

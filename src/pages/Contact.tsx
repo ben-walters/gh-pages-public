@@ -4,9 +4,9 @@ import {stackSpacing} from "../constants";
 
 function ContactPage({id}: {id: string}) {
   return (
-    <Box id={id} sx={pageStyles}>
+    <Box id={id} sx={pageStyles} className="portfolio-section">
       <Stack spacing={stackSpacing} direction={"column"}>
-        <Typography variant="h1">Get in touch</Typography>
+        <Typography variant="h2">Get in touch</Typography>
         <Typography variant="body1">
           Ping me an email at{" "}
           <Link

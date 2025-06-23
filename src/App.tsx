@@ -5,11 +5,13 @@ import ContactPage from "./pages/Contact";
 import IntroPage from "./pages/IntroPage";
 import PortfolioPage from "./pages/Portfolio";
 import "./style/App.css";
-import {Grid} from "@mui/material";
+import {Box, Fab, Grid} from "@mui/material";
 import {pageDetectOffset} from "./constants";
+import {Close, Menu} from "@mui/icons-material";
 
 function App() {
   const [activeSection, setActiveSection] = useState<string>("intro");
+  const [menuOpen, setMenuOpen] = useState<boolean>(false);
   const scrollContainerRef = useRef<HTMLDivElement | null>(null);
 
   useEffect(() => {
@@ -63,37 +65,64 @@ function App() {
     }
   };
 
-  return (
-    <Grid container sx={{height: "100vh"}}>
-      <Grid
-        display={{xs: "none", sm: "block"}}
-        size={{sm: 4, md: 3, lg: 2}}
-        sx={{
-          borderRight: "1px solid",
-          borderColor: "primary.main",
-          textAlign: "center",
-          height: "100vh",
-          backgroundColor: "rgba(31, 31, 31, 0.8)",
-          boxShadow: "0 0 10px rgba(51, 106, 235, 1)",
-        }}
-      >
-        <LeftNav
-          activeSection={activeSection}
-          onSectionClick={scrollToSection}
-        />
-      </Grid>
+  const toggleMenu = () => setMenuOpen(!menuOpen);
 
-      <Grid
-        size={{xs: 12, sm: 8, md: 9, lg: 10}}
-        ref={scrollContainerRef}
-        sx={{flex: 1, height: "100vh", overflowY: "auto", p: 3}}
-      >
-        <IntroPage id="intro" />
-        <AboutPage id="about" />
-        <PortfolioPage id="portfolio" />
-        <ContactPage id="contact" />
+  return (
+    <>
+      <Box display={{sm: "none", xs: "block"}}>
+        <Fab
+          className={"menu-fab"}
+          sx={{
+            position: "fixed",
+            bottom: 16,
+            right: 16,
+            zIndex: 1000,
+            backgroundColor: "primary.main",
+            color: "white",
+            "&:hover": {
+              backgroundColor: "primary.dark",
+            },
+          }}
+          color="primary"
+          aria-label="add"
+          onClick={toggleMenu}
+        >
+          {menuOpen ? <Close /> : <Menu />}
+        </Fab>
+      </Box>
+
+      <Grid container sx={{height: "100vh"}}>
+        <Grid
+          className={menuOpen ? "left-nav open" : "left-nav"}
+          size={{sm: 4, md: 3, lg: 2}}
+          sx={{
+            borderRight: "1px solid",
+            borderColor: "primary.main",
+            textAlign: "center",
+            height: "100vh",
+            backgroundColor: "rgba(31, 31, 31, 0.8)",
+            boxShadow: "0 0 10px rgba(51, 106, 235, 1)",
+            backdropFilter: "blur(10px)",
+          }}
+        >
+          <LeftNav
+            activeSection={activeSection}
+            onSectionClick={scrollToSection}
+          />
+        </Grid>
+
+        <Grid
+          size={{xs: 12, sm: 8, md: 9, lg: 10}}
+          ref={scrollContainerRef}
+          sx={{flex: 1, height: "100vh", overflowY: "auto", p: 3}}
+        >
+          <IntroPage id="intro" />
+          <AboutPage id="about" />
+          <PortfolioPage id="portfolio" />
+          <ContactPage id="contact" />
+        </Grid>
       </Grid>
-    </Grid>
+    </>
   );
 }
 
