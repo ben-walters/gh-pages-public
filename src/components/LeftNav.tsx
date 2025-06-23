@@ -1,4 +1,4 @@
-import {Link} from "@mui/material";
+import {Box, Link} from "@mui/material";
 import Menu from "@mui/material/List";
 import MenuItem from "@mui/material/ListItem";
 
@@ -11,11 +11,16 @@ function LeftNav({
 }) {
   return (
     <>
-      <img
+      <Box
+        component="img"
+        sx={{
+          width: "100%",
+          padding: "3rem",
+        }}
+        alt="The house from the offer."
         src="/ast-logo-white-text.svg"
-        alt="logo"
-        style={{height: "100px", margin: "3rem"}}
       />
+
       <Menu className="menuLink">
         <MenuItem>
           <Link

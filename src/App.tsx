@@ -66,10 +66,11 @@ function App() {
   return (
     <Grid container sx={{height: "100vh"}}>
       <Grid
+        display={{xs: "none", sm: "block"}}
+        size={{sm: 4, md: 3, lg: 2}}
         sx={{
           borderRight: "1px solid",
           borderColor: "primary.main",
-          width: "400px",
           textAlign: "center",
           height: "100vh",
           backgroundColor: "rgba(31, 31, 31, 0.8)",
@@ -83,8 +84,9 @@ function App() {
       </Grid>
 
       <Grid
+        size={{xs: 12, sm: 8, md: 9, lg: 10}}
         ref={scrollContainerRef}
-        sx={{flex: 1, height: "100vh", overflowY: "auto"}}
+        sx={{flex: 1, height: "100vh", overflowY: "auto", p: 3}}
       >
         <IntroPage id="intro" />
         <AboutPage id="about" />
