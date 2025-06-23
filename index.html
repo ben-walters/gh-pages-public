@@ -64,9 +64,20 @@
               })`;
               ctx.lineWidth = 1;
               ctx.stroke();
+              // if (
+              //   points[i].isConnected === false &&
+              //   points[j].isConnected === false
+              // ) {
+              //   ctx.beginPath();
+              //   ctx.arc(points[i].x, points[i].y, 2, 0, Math.PI * 2);
+              //   ctx.fillStyle = "#fff";
+              //   ctx.fill();
+              // }
               points[i].isConnected = true;
+              points[j].isConnected = true;
             } else {
               points[i].isConnected = false;
+              points[j].isConnected = false;
             }
           }
         }
