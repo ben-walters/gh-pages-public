@@ -36,6 +36,18 @@ function LeftNav({
         </MenuItem>
         <MenuItem>
           <Link
+            href="#skills"
+            className={activeSection === "skills" ? "active" : ""}
+            onClick={(e) => {
+              e.preventDefault();
+              onSectionClick("skills");
+            }}
+          >
+            skills
+          </Link>
+        </MenuItem>
+        <MenuItem>
+          <Link
             href="#portfolio"
             className={activeSection === "portfolio" ? "active" : ""}
             onClick={(e) => {

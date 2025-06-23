@@ -8,6 +8,7 @@ import "./style/App.css";
 import {Box, Fab, Grid} from "@mui/material";
 import {pageDetectOffset} from "./constants";
 import {Close, Menu} from "@mui/icons-material";
+import SkillsPage from "./pages/Skills";
 
 function App() {
   const [activeSection, setActiveSection] = useState<string>("intro");
@@ -15,7 +16,7 @@ function App() {
   const scrollContainerRef = useRef<HTMLDivElement | null>(null);
 
   useEffect(() => {
-    const sections = ["intro", "about", "portfolio", "contact"];
+    const sections = ["intro", "about", "skills", "portfolio", "contact"];
     const scrollContainer = scrollContainerRef.current;
 
     if (!scrollContainer) return;
@@ -118,6 +119,7 @@ function App() {
         >
           <IntroPage id="intro" />
           <AboutPage id="about" />
+          <SkillsPage id="skills" />
           <PortfolioPage id="portfolio" />
           <ContactPage id="contact" />
         </Grid>
